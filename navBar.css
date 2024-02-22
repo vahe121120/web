@@ -1,0 +1,22 @@
+* {
+	padding: 5px;
+	text-decoration: none;
+}
+
+.links {
+	height: 60px;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	background-color: black;	
+}
+
+.link a {
+	height: 60px;
+	color: white;
+}
+
+.link a:hover {
+	color: black;
+	background-color: green;
+}
