@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+  <style>
+      #hiddenMessage {
+          display: none;
+      }
+  </style>
+</head>
+<body>
+
+<button id="1">show/hide</button>
+
+<div id="2">hidden message</div>
+
+<script>
+    	document.getElementById("1").addEventListener("click", function() {
+        	let message = document.getElementById("2");
+        
+		if (message.style.display === "none") {
+            		message.style.display = "block";
+	        } else {
+        	    message.style.display = "none";
+	        }
+    	});
+</script>
+
+</body>
+</html>
