@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<input type='text' placeholder='Enter text' id='1' />
+	<button id='2'>Display</button></br>
+	<p id='3'></p>
+
+<script>
+    	
+	let input = document.getElementById("1");
+	let button = document.getElementById("2").addEventListener("click", function disp() {
+		document.getElementById("3").innerHTML = input.value;
+	});
+
+</script>
+
+</body>
+</html>
