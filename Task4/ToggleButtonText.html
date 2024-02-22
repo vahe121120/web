@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+<button id="1">Hello</button>
+
+<script>
+    	let msg = document.getElementById("1");
+	msg.addEventListener("click", function change() {
+		if (msg.innerHTML === "Hello")
+			msg.innerHTML = "Goodbye";
+		else
+			msg.innerHTML = "Hello";
+	});
+</script>
+
+</body>
+</html>
