@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+	<input type='text' placeholder='e-mail'id='1' />
+	<button id='2'>Submit</button>
+
+	<script>
+
+		let button = document.getElementById("2").addEventListener("click", function check() {
+			let input = document.getElementById("1");
+			if (input.value === "" || input.value === " ") {
+				alert("Please enter an email address");
+			}
+		});
+	</script>
+</body>
+</html>
