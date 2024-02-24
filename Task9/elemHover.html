@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="item1">link_1</li>
+        <li class="item2">link_2</li>
+        <li class="item3">link_3</li>
+        <li class="item4">link_4</li>
+        <li class="item5">link_5</li>
+    </ul>
+
+    <script>
+        let li1 = document.querySelector(".item1");
+        let li2 = document.querySelector(".item2");
+        let li3 = document.querySelector(".item3");
+        let li4 = document.querySelector(".item4");
+        let li5 = document.querySelector(".item5");
+
+        hover(li1);
+        hover(li2);
+        hover(li3);
+        hover(li4);
+        hover(li5);
+
+        function hover(li) {
+            li.addEventListener("mouseover", () => {
+                li.style.color = "red";
+            });
+
+            li.addEventListener("mouseout", () => {
+                li.style.color = "";
+            });
+        }
+    </script>
+</body>
+</html>
