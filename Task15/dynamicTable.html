@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dynamic Table</title>
+
+	<style>
+		#div{
+			display: flex;
+			
+		}
+		#table {
+			width: 1200px;
+		}
+		#tr {
+			border: 2px solid red;
+		}
+		
+
+	</style>
+</head>
+<body>
+<div id='div'>
+	<table id='table'>
+		<thead>
+			<tr id='tr'>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Department</th>
+				<th>Role Title</th>
+				<th>Role Level</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Skills</th>
+			</tr>
+		</thead>
+		<tbody id='tbody'>
+			
+		</tbody>
+	</table>
+</div>
+
+<script>
+	const employees = [
+		{
+			id: 1,
+			name: "John Doe",
+			age: 30,
+			department: "Engineering",
+			role: { title: "Frontend Developer", level: "Mid" },
+			contact: { email: "john.doe@example.com", phone: "123-456-7890" },
+			skills: ["JavaScript", "React", "CSS"],
+		},
+		{
+			id: 2,
+			name: "Jane Smith",
+			age: 28,
+			department: "Design",
+			role: {title: "UI/UX Designer", level: "Senior"},
+			contact: {email: "jane.smith@example.com", phone: "098-765-4321"},
+			skills: ["Figma", "Sketch", "Adobe XD"],
+		},
+		{
+			id: 3,
+			name: "Allen Alian",
+			age: 43,
+			department: "Programming",
+			role: { title: "System Developer", level: "Junior" },
+			contact: { email: "allen.al@example.com", phone: "098-56-66-75" },
+			skills: ["C++", "C", "Assembly", "Linux"],
+		},
+	];
+	
+	const tbody = document.getElementById("tbody");
+	let i = 0;
+
+	employees.forEach( () => {
+		const tr = document.createElement("tr");
+		tbody.appendChild(tr);
+
+		const thId = document.createElement("th");
+		tr.appendChild(thId);
+		thId.innerHTML = employees[i].id;
+		
+		const thName = document.createElement("th");
+		tr.appendChild(thName);
+		thName.innerHTML = employees[i].name;
+
+		const thAge = document.createElement("th");
+		tr.appendChild(thAge);
+		thAge.innerHTML = employees[i].age;
+
+		const thDep = document.createElement("th");
+		tr.appendChild(thDep);
+		thDep.innerHTML = employees[i].department;
+
+		const thRoleT = document.createElement("th");
+		tr.appendChild(thRoleT);
+		thRoleT.innerHTML = employees[i].role.title;
+
+		const thRoleL = document.createElement("th");
+		tr.appendChild(thRoleL);
+		thRoleL.innerHTML = employees[i].role.level;
+
+		const thContE = document.createElement("th");
+		tr.appendChild(thContE);
+		thContE.innerHTML = employees[i].contact.email;
+
+		const thContP = document.createElement("th");
+		tr.appendChild(thContP);
+		thContP.innerHTML = employees[i].contact.phone;
+
+		const thJoin = document.createElement("th");
+		tr.appendChild(thJoin);
+		thJoin.innerHTML = employees[i].skills.join(", ");
+	
+		++i;
+	});
+</script>
+
+</body>
+</html>
